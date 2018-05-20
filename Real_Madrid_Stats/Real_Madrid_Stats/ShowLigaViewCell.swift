@@ -1,5 +1,5 @@
 //
-//  ResultLigaViewController.swift
+//  ShowLigaViewCell.swift
 //  Real_Madrid_Stats
 //
 //  Created by Ivan Prokopenko on 20.05.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultLogaViewController: UIViewController {
+class ShowLigaViewCell: UITableViewCell {
     
     
     

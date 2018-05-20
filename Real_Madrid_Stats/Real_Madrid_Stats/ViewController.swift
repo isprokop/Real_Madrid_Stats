@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var textYearLigaTable: UITextField!
+    @IBOutlet weak var textYearPlayerPicker: UITextField!
+    
+  
+    
+    
+    @IBOutlet weak var showLaLigaTableButton: UIButton!
+    @IBOutlet weak var showPlayerStatsButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -15,7 +15,7 @@
         <!--View Controller-->
         <scene sceneID="jGM-NG-n9X">
             <objects>
-                <viewController id="nCz-en-F6v" sceneMemberID="viewController">
+                <viewController id="nCz-en-F6v" customClass="ViewController" customModule="Real_Madrid_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIC-l9-5FP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,31 +23,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealMainPicture" translatesAutoresizingMaskIntoConstraints="NO" id="laM-CN-Inj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-Gc-Z4Y">
-                                <rect key="frame" x="112.5" y="583" width="150" height="37"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ut8-dz-zMj" userLabel="Text Year Liga Picker">
+                                <rect key="frame" x="112" y="142" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DnO-Gc-Z4Y" secondAttribute="height" multiplier="150:37" id="4LG-Jh-vxo"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="SFO-VK-XBR"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="lM3-AM-iL8"/>
+                                    <constraint firstAttribute="height" constant="21" id="DEs-Bt-q7H"/>
+                                    <constraint firstAttribute="width" constant="150" id="sP3-da-97P"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Show Player Stats">
-                                            <attributes>
-                                                <color key="NSColor" red="0.38" green="0.628" blue="0.745" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="HP3-d8-kVt" kind="show" id="YUi-01-CY2"/>
-                                </connections>
-                            </button>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBR-JO-Bik">
-                                <rect key="frame" x="111.5" y="241" width="151" height="37"/>
+                                <rect key="frame" x="112" y="241" width="151" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="5Dn-mh-c7f"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="L3g-0n-ppi"/>
@@ -69,38 +56,65 @@
                                     <segue destination="Z4I-Lz-dOx" kind="show" id="fKk-3l-JqH"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9v-c5-5rd">
-                                <rect key="frame" x="28" y="142" width="320" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqT-k6-wyB" userLabel="Text Year Player Picker">
+                                <rect key="frame" x="112.5" y="484" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="NhP-No-G6T"/>
+                                    <constraint firstAttribute="height" constant="21" id="Rol-O4-ADx"/>
+                                    <constraint firstAttribute="width" constant="150" id="rin-h0-gfx"/>
                                 </constraints>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52l-Lf-hAj">
-                                <rect key="frame" x="27" y="484" width="320" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-Gc-Z4Y">
+                                <rect key="frame" x="112" y="583" width="150" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="ZVD-t3-Ru5"/>
+                                    <constraint firstAttribute="width" secondItem="DnO-Gc-Z4Y" secondAttribute="height" multiplier="150:37" id="4LG-Jh-vxo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="SFO-VK-XBR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="lM3-AM-iL8"/>
                                 </constraints>
-                            </pickerView>
+                                <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Show Player Stats">
+                                            <attributes>
+                                                <color key="NSColor" red="0.38" green="0.628" blue="0.745" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="HP3-d8-kVt" kind="show" id="YUi-01-CY2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="laM-CN-Inj" firstAttribute="top" secondItem="8pq-no-3NZ" secondAttribute="top" id="5aZ-35-EUE"/>
-                            <constraint firstItem="O9v-c5-5rd" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="9RF-fO-tqp"/>
                             <constraint firstItem="laM-CN-Inj" firstAttribute="leading" secondItem="8pq-no-3NZ" secondAttribute="leading" id="9T7-Mw-c1e"/>
                             <constraint firstItem="wBR-JO-Bik" firstAttribute="top" secondItem="8pq-no-3NZ" secondAttribute="top" constant="177" id="Be1-dA-RPP"/>
-                            <constraint firstItem="wBR-JO-Bik" firstAttribute="top" secondItem="O9v-c5-5rd" secondAttribute="bottom" constant="78" id="BeB-Ma-8EF"/>
+                            <constraint firstItem="Ut8-dz-zMj" firstAttribute="top" secondItem="8pq-no-3NZ" secondAttribute="top" constant="78" id="C6R-C8-G9F"/>
                             <constraint firstItem="wBR-JO-Bik" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="NEa-VH-5eH"/>
+                            <constraint firstItem="wBR-JO-Bik" firstAttribute="top" secondItem="Ut8-dz-zMj" secondAttribute="bottom" constant="78" id="Wdl-IW-iND"/>
                             <constraint firstItem="laM-CN-Inj" firstAttribute="trailing" secondItem="8pq-no-3NZ" secondAttribute="trailing" id="XBc-Bs-LJO"/>
-                            <constraint firstItem="O9v-c5-5rd" firstAttribute="top" secondItem="8pq-no-3NZ" secondAttribute="top" constant="78" id="ZM5-dK-NB6"/>
-                            <constraint firstItem="DnO-Gc-Z4Y" firstAttribute="top" secondItem="52l-Lf-hAj" secondAttribute="bottom" constant="78" id="hba-2r-qpQ"/>
+                            <constraint firstItem="DnO-Gc-Z4Y" firstAttribute="top" secondItem="xqT-k6-wyB" secondAttribute="bottom" constant="78" id="bcx-YH-B9a"/>
                             <constraint firstItem="DnO-Gc-Z4Y" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="i36-Za-7cb"/>
                             <constraint firstItem="laM-CN-Inj" firstAttribute="bottom" secondItem="8pq-no-3NZ" secondAttribute="bottom" id="j49-Z2-vl0"/>
                             <constraint firstItem="8pq-no-3NZ" firstAttribute="bottom" secondItem="DnO-Gc-Z4Y" secondAttribute="bottom" constant="47" id="oIQ-wE-nQo"/>
-                            <constraint firstItem="52l-Lf-hAj" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="ojf-qz-dam"/>
+                            <constraint firstItem="Ut8-dz-zMj" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="u2l-Y4-7uW"/>
+                            <constraint firstItem="xqT-k6-wyB" firstAttribute="centerX" secondItem="aIC-l9-5FP" secondAttribute="centerX" id="yhh-zQ-HxZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8pq-no-3NZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="7HE-Dk-9C1"/>
+                    <connections>
+                        <outlet property="showLaLigaTableButton" destination="wBR-JO-Bik" id="oPz-24-q5v"/>
+                        <outlet property="showPlayerStatsButton" destination="DnO-Gc-Z4Y" id="LKx-ld-Mil"/>
+                        <outlet property="textYearLigaTable" destination="Ut8-dz-zMj" id="wDd-eU-fzr"/>
+                        <outlet property="textYearPlayerPicker" destination="xqT-k6-wyB" id="uf6-zg-D9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xu5-tb-B9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +139,7 @@
         <!--Result Liga View Controller-->
         <scene sceneID="f1u-8s-BVK">
             <objects>
-                <viewController id="Z4I-Lz-dOx" userLabel="Result Liga View Controller" sceneMemberID="viewController">
+                <viewController id="Z4I-Lz-dOx" userLabel="Result Liga View Controller" customClass="ResultLigaViewController" customModule="Real_Madrid_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0I-Yf-2Ac">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LaLigaTable" id="L82-bo-jkT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LaLigaTable" id="L82-bo-jkT" userLabel="laLigaTableCell" customClass="ShowLigaViewCell" customModule="Real_Madrid_Stats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L82-bo-jkT" id="78E-77-rAY">
@@ -191,7 +205,7 @@
         <!--Result Player View Controller-->
         <scene sceneID="EBe-IX-RLy">
             <objects>
-                <viewController id="HP3-d8-kVt" userLabel="Result Player View Controller" sceneMemberID="viewController">
+                <viewController id="HP3-d8-kVt" userLabel="Result Player View Controller" customClass="ResultPlayerViewController" customModule="Real_Madrid_Stats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ssd-AS-ZpK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,6 +229,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCM-Ar-tHK">
+                                <rect key="frame" x="196" y="225" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.38" green="0.628" blue="0.745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upt-s2-htU">
                                 <rect key="frame" x="196" y="253" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -225,7 +245,7 @@
                                 <rect key="frame" x="0.0" y="321" width="375" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="68u-3w-73b" userLabel="statCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="68u-3w-73b" userLabel="statCell" customClass="ShowPlayerViewCell" customModule="Real_Madrid_Stats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68u-3w-73b" id="MNV-4u-Ae3">
@@ -258,12 +278,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCM-Ar-tHK">
-                                <rect key="frame" x="196" y="225" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.38" green="0.628" blue="0.745" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

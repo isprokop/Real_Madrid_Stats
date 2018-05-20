@@ -6,4 +6,22 @@
 //  Copyright © 2018 Ivan Prokopenko. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ResultPlayerViewController: UIViewController {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
