@@ -10,12 +10,17 @@ import UIKit
 
 class ShowLigaViewCell: UITableViewCell {
     
+    @IBOutlet weak var teamPositionLabel: UILabel!
+    @IBOutlet weak var teamNameText: UITextField!
+    @IBOutlet weak var pointsLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
-    
-    
-    
-    
-    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
 }
+

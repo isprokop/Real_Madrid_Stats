@@ -13,6 +13,7 @@
 		E88471C9209EE94A00CAC773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88471C7209EE94A00CAC773 /* Main.storyboard */; };
 		E88471CB209EE94C00CAC773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88471CA209EE94C00CAC773 /* Assets.xcassets */; };
 		E88471CE209EE94C00CAC773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88471CC209EE94C00CAC773 /* LaunchScreen.storyboard */; };
+		E88E4A1C20C9A7A200D1310F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E4A1B20C9A7A200D1310F /* Data.swift */; };
 		E8A07BE820B1E4E000E1E761 /* ResultPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A07BE720B1E4E000E1E761 /* ResultPlayerViewController.swift */; };
 		E8A07BEA20B1E4EF00E1E761 /* ResultLigaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A07BE920B1E4EF00E1E761 /* ResultLigaViewController.swift */; };
 		E8D52C3D20B20FCE003D51E1 /* ShowPlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D52C3C20B20FCD003D51E1 /* ShowPlayerViewCell.swift */; };
@@ -28,6 +29,7 @@
 		E88471CA209EE94C00CAC773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E88471CD209EE94C00CAC773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E88471CF209EE94C00CAC773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E88E4A1B20C9A7A200D1310F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E8A07BE720B1E4E000E1E761 /* ResultPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPlayerViewController.swift; sourceTree = "<group>"; };
 		E8A07BE920B1E4EF00E1E761 /* ResultLigaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLigaViewController.swift; sourceTree = "<group>"; };
 		E8D52C3C20B20FCD003D51E1 /* ShowPlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPlayerViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				E88471C3209EE94A00CAC773 /* AppDelegate.swift */,
 				E88471C5209EE94A00CAC773 /* ViewController.swift */,
 				E88471C7209EE94A00CAC773 /* Main.storyboard */,
+				E88E4A1B20C9A7A200D1310F /* Data.swift */,
 				E820A5CF20B1E92500AE2E02 /* StatData.swift */,
 				E8A07BE920B1E4EF00E1E761 /* ResultLigaViewController.swift */,
 				E8D52C3E20B20FE2003D51E1 /* ShowLigaViewCell.swift */,
@@ -157,6 +160,7 @@
 				E820A5D020B1E92500AE2E02 /* StatData.swift in Sources */,
 				E8A07BE820B1E4E000E1E761 /* ResultPlayerViewController.swift in Sources */,
 				E8D52C3F20B20FE2003D51E1 /* ShowLigaViewCell.swift in Sources */,
+				E88E4A1C20C9A7A200D1310F /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

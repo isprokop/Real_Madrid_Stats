@@ -6,4 +6,24 @@
 //  Copyright © 2018 Ivan Prokopenko. All rights reserved.
 //
 
-import Foundation
+struct StatData {
+    var height:Int?
+    var weight:Int?
+    var matchesPlayed:Int?
+    var goals:Int?
+    var assists:Int?
+    var yellowCards:Int?
+    var redCards:Int?
+}
+
+struct PlayersData {
+    var players = [String:String]()
+}
+
+struct TournamentData {
+    let tournaments = ["sr:tournament:8"]
+}
+
+struct SeasonData {
+    var seasons = [String]()
+}
