@@ -15,18 +15,32 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var textSeasonLigaTable: UITextField!
     @IBOutlet weak var textSeasonPlayerPicker: UITextField!
-  
+    
     private var seasonPicker = UIPickerView()
     private var playerPicker = UIPickerView()
     
     @IBOutlet weak var showLaLigaTableButton: UIButton!
     @IBOutlet weak var showPlayerStatsButton: UIButton!
     
+    @IBAction func checkTableConnection(_ sender: Any) {
+        checkReachability()
+    }
     
+    @IBAction func checkPlayerConnection(_ sender: Any) {
+        checkReachability()
+    }
+  
     private var teamPlayers = ["Cristiano Ronaldo":"sr:player:750"]
     private var playerAndLigaSeasons = ["2017-2018"]
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +65,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    
-    
+    func checkReachability() {
+        if currentReachabilityStatus == .notReachable {
+            let alert = UIAlertController(title: "Sorry, something went wrong", message: "Check Internet connection", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ (action) in alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

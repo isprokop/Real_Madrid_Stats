@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E820A5D020B1E92500AE2E02 /* StatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820A5CF20B1E92500AE2E02 /* StatData.swift */; };
+		E82187BC20CBD2CD00A928E6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82187BB20CBD2CD00A928E6 /* Reachability.swift */; };
 		E88471C4209EE94A00CAC773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88471C3209EE94A00CAC773 /* AppDelegate.swift */; };
 		E88471C6209EE94A00CAC773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88471C5209EE94A00CAC773 /* ViewController.swift */; };
 		E88471C9209EE94A00CAC773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88471C7209EE94A00CAC773 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		E820A5CF20B1E92500AE2E02 /* StatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatData.swift; sourceTree = "<group>"; };
+		E82187BB20CBD2CD00A928E6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E88471C0209EE94A00CAC773 /* Real_Madrid_Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Real_Madrid_Stats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88471C3209EE94A00CAC773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88471C5209EE94A00CAC773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E8D52C3E20B20FE2003D51E1 /* ShowLigaViewCell.swift */,
 				E8A07BE720B1E4E000E1E761 /* ResultPlayerViewController.swift */,
 				E8D52C3C20B20FCD003D51E1 /* ShowPlayerViewCell.swift */,
+				E82187BB20CBD2CD00A928E6 /* Reachability.swift */,
 				E88471CA209EE94C00CAC773 /* Assets.xcassets */,
 				E88471CC209EE94C00CAC773 /* LaunchScreen.storyboard */,
 				E88471CF209EE94C00CAC773 /* Info.plist */,
@@ -158,6 +161,7 @@
 				E8D52C3D20B20FCE003D51E1 /* ShowPlayerViewCell.swift in Sources */,
 				E88471C4209EE94A00CAC773 /* AppDelegate.swift in Sources */,
 				E820A5D020B1E92500AE2E02 /* StatData.swift in Sources */,
+				E82187BC20CBD2CD00A928E6 /* Reachability.swift in Sources */,
 				E8A07BE820B1E4E000E1E761 /* ResultPlayerViewController.swift in Sources */,
 				E8D52C3F20B20FE2003D51E1 /* ShowLigaViewCell.swift in Sources */,
 				E88E4A1C20C9A7A200D1310F /* Data.swift in Sources */,

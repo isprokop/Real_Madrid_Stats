@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultLogaViewController: UIViewController {
+class ResultLigaViewController: UIViewController {
     
     
     
@@ -16,6 +16,8 @@ class ResultLogaViewController: UIViewController {
     
     
     
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
 }
