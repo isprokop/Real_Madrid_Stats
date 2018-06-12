@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func checkPlayerConnection(_ sender: Any) {
         checkReachability()
     }
-  
+    
     private var teamPlayers = ["Cristiano Ronaldo":"sr:player:750"]
     private var playerAndLigaSeasons = ["2017-2018"]
     
@@ -110,6 +110,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard currentReachabilityStatus != .notReachable else { return }
+        let names = [String](teamPlayers.keys)
+        let resultDestination = segue.destination as? ResultPlayerViewController
+        resultDestination?.imageName = teamPlayers[names[indexPlayer]]
+        if let playerID = teamPlayers[names[indexPlayer]] {
+            resultDestination?.playerID = playerID
+        }
+        let chosenSeason = playerAndLigaSeasons[indexSeason]
+        resultDestination?.chosenSeason = chosenSeason
+    }
+    
+    
+    
+    
+    
     
 }
 

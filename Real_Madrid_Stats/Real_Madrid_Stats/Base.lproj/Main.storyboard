@@ -314,6 +314,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="38h-47-gQT"/>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="hOx-ha-kZp" id="sNh-Xc-FG1"/>
+                        <outlet property="heightValueLabel" destination="iC9-Id-oQQ" id="YhU-Fy-f0C"/>
+                        <outlet property="playerImage" destination="udZ-no-Dfl" id="cAD-qi-PuL"/>
+                        <outlet property="statTableView" destination="jyp-VK-mKE" id="9hA-Lb-d3L"/>
+                        <outlet property="weightLabel" destination="FCM-Ar-tHK" id="Ckh-Tc-1pm"/>
+                        <outlet property="weightLabelValue" destination="Upt-s2-htU" id="rM6-0b-I6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMI-2h-4Ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

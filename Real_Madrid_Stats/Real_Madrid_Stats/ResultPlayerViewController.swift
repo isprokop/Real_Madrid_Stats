@@ -10,12 +10,19 @@ import UIKit
 
 class ResultPlayerViewController: UIViewController {
     
+    var imageName:String!
+    var playerID:String!
+    var chosenSeason:String!
     
+    let parameters = ["Matches played", "Goals", "Assists", "Yellow cards", "Red cards"]
     
+    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var statTableView: UITableView!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     
-    
-    
-    
+    @IBOutlet weak var heightValueLabel: UILabel!
+    @IBOutlet weak var weightLabelValue: UILabel!
     
     override var prefersStatusBarHidden: Bool {
         return true
