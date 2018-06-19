@@ -122,12 +122,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let chosenSeason = playerAndLigaSeasons[indexSeason]
         resultDestination?.chosenSeason = chosenSeason
     }
-    
-    
-    
-    //prepare for segue for liiga table will be here
-    
-    
 }
 
 

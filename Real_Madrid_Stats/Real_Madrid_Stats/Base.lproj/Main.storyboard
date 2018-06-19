@@ -145,8 +145,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-wG-ivD">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-wG-ivD" userLabel="Team Table View">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LaLigaTable" id="L82-bo-jkT" userLabel="laLigaTableCell" customClass="ShowLigaViewCell" customModule="Real_Madrid_Stats" customModuleProvider="target">
@@ -156,53 +156,99 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-ku-zAH">
-                                                    <rect key="frame" x="2" y="11.5" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09B-Ac-njr" userLabel="Team Position">
+                                                    <rect key="frame" x="5" y="5" width="42" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQY-G7-W9B">
-                                                    <rect key="frame" x="49" y="7" width="268" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfm-8d-L3M" userLabel="Team Name">
+                                                    <rect key="frame" x="54" y="5" width="267" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-gn-tja">
-                                                    <rect key="frame" x="331" y="12" width="42" height="20.5"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoB-Kr-REX" userLabel="Points">
+                                                    <rect key="frame" x="328" y="5" width="42" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Dck-gn-tja" secondAttribute="trailing" constant="2" id="C2x-3K-3bX"/>
-                                                <constraint firstItem="rQY-G7-W9B" firstAttribute="leading" secondItem="6Ml-ku-zAH" secondAttribute="trailing" constant="5" id="KAF-eq-gP2"/>
-                                                <constraint firstItem="Dck-gn-tja" firstAttribute="centerY" secondItem="78E-77-rAY" secondAttribute="centerY" id="VVJ-F2-uAZ"/>
-                                                <constraint firstItem="6Ml-ku-zAH" firstAttribute="centerY" secondItem="78E-77-rAY" secondAttribute="centerY" id="Wwt-lu-KRN"/>
-                                                <constraint firstItem="rQY-G7-W9B" firstAttribute="centerY" secondItem="78E-77-rAY" secondAttribute="centerY" id="bWx-8h-dFC"/>
-                                                <constraint firstItem="Dck-gn-tja" firstAttribute="leading" secondItem="rQY-G7-W9B" secondAttribute="trailing" constant="14" id="opa-cE-JUJ"/>
-                                                <constraint firstItem="6Ml-ku-zAH" firstAttribute="leading" secondItem="78E-77-rAY" secondAttribute="leading" constant="2" id="qOK-Ol-1gB"/>
+                                                <constraint firstAttribute="bottom" secondItem="09B-Ac-njr" secondAttribute="bottom" constant="5" id="1ic-Xa-EiX"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mfm-8d-L3M" secondAttribute="bottom" constant="5" id="3jS-3X-yBP"/>
+                                                <constraint firstItem="Mfm-8d-L3M" firstAttribute="leading" secondItem="09B-Ac-njr" secondAttribute="trailing" constant="7" id="PTq-gs-zvw"/>
+                                                <constraint firstAttribute="trailing" secondItem="zoB-Kr-REX" secondAttribute="trailing" constant="5" id="PZy-RU-rbb"/>
+                                                <constraint firstItem="09B-Ac-njr" firstAttribute="top" secondItem="78E-77-rAY" secondAttribute="top" constant="5" id="QDy-Xo-9tz"/>
+                                                <constraint firstItem="Mfm-8d-L3M" firstAttribute="top" secondItem="78E-77-rAY" secondAttribute="top" constant="5" id="R35-OE-vvX"/>
+                                                <constraint firstItem="zoB-Kr-REX" firstAttribute="leading" secondItem="Mfm-8d-L3M" secondAttribute="trailing" constant="7" id="aFm-ZU-5nO"/>
+                                                <constraint firstItem="09B-Ac-njr" firstAttribute="leading" secondItem="78E-77-rAY" secondAttribute="leading" constant="5" id="gFx-Dt-ETH"/>
+                                                <constraint firstAttribute="bottom" secondItem="zoB-Kr-REX" secondAttribute="bottom" constant="5" id="nKg-46-4go"/>
+                                                <constraint firstItem="zoB-Kr-REX" firstAttribute="top" secondItem="78E-77-rAY" secondAttribute="top" constant="5" id="v3F-dP-3h0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="pointsLabel" destination="Dck-gn-tja" id="leu-mt-WjD"/>
-                                            <outlet property="teamNameText" destination="rQY-G7-W9B" id="q22-ms-8P2"/>
-                                            <outlet property="teamPositionLabel" destination="6Ml-ku-zAH" id="0jl-zB-SMp"/>
+                                            <outlet property="pointsResultLabel" destination="zoB-Kr-REX" id="kO7-w7-8aC"/>
+                                            <outlet property="teamNameResultLabel" destination="Mfm-8d-L3M" id="W8p-MW-aGe"/>
+                                            <outlet property="teamPositionResultLabel" destination="09B-Ac-njr" id="atd-uA-VKj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lc-eP-B06">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Pos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIN-x9-4X4" userLabel="Team Position">
+                                        <rect key="frame" x="5" y="5" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLQ-Db-UBO" userLabel="Team Name">
+                                        <rect key="frame" x="45" y="5" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="252" text="Pts." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saB-MD-W76" userLabel="Points">
+                                        <rect key="frame" x="340" y="5" width="30" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DIN-x9-4X4" firstAttribute="top" secondItem="5Lc-eP-B06" secondAttribute="top" constant="5" id="2SY-nS-39j"/>
+                                    <constraint firstAttribute="bottom" secondItem="DLQ-Db-UBO" secondAttribute="bottom" constant="5" id="Byt-Wu-Zec"/>
+                                    <constraint firstItem="saB-MD-W76" firstAttribute="top" secondItem="5Lc-eP-B06" secondAttribute="top" constant="5" id="ICZ-pa-tz0"/>
+                                    <constraint firstAttribute="trailing" secondItem="saB-MD-W76" secondAttribute="trailing" constant="5" id="J8m-Em-Vnk"/>
+                                    <constraint firstAttribute="height" constant="44" id="PBW-7F-VMe"/>
+                                    <constraint firstAttribute="bottom" secondItem="DIN-x9-4X4" secondAttribute="bottom" constant="5" id="Pak-Ky-Fim"/>
+                                    <constraint firstItem="DLQ-Db-UBO" firstAttribute="leading" secondItem="DIN-x9-4X4" secondAttribute="trailing" constant="7" id="QjF-Kt-yeF"/>
+                                    <constraint firstItem="DLQ-Db-UBO" firstAttribute="top" secondItem="5Lc-eP-B06" secondAttribute="top" constant="5" id="QxJ-zM-udF"/>
+                                    <constraint firstItem="DIN-x9-4X4" firstAttribute="leading" secondItem="5Lc-eP-B06" secondAttribute="leading" constant="5" id="aEu-FW-zcj"/>
+                                    <constraint firstAttribute="bottom" secondItem="saB-MD-W76" secondAttribute="bottom" constant="5" id="j1F-o9-bCj"/>
+                                    <constraint firstItem="saB-MD-W76" firstAttribute="leading" secondItem="DLQ-Db-UBO" secondAttribute="trailing" constant="7" id="m2o-tj-Hq2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NMi-wG-ivD" firstAttribute="bottom" secondItem="8v0-sR-Jkm" secondAttribute="bottom" id="0mH-Ud-TWr"/>
+                            <constraint firstItem="5Lc-eP-B06" firstAttribute="leading" secondItem="8v0-sR-Jkm" secondAttribute="leading" id="1jf-sB-E8D"/>
+                            <constraint firstItem="8v0-sR-Jkm" firstAttribute="trailing" secondItem="5Lc-eP-B06" secondAttribute="trailing" id="MkO-hb-Ta6"/>
                             <constraint firstItem="NMi-wG-ivD" firstAttribute="trailing" secondItem="8v0-sR-Jkm" secondAttribute="trailing" id="UWg-Nc-VdP"/>
-                            <constraint firstItem="NMi-wG-ivD" firstAttribute="top" secondItem="8v0-sR-Jkm" secondAttribute="top" id="ixc-y6-kyG"/>
+                            <constraint firstItem="NMi-wG-ivD" firstAttribute="top" secondItem="5Lc-eP-B06" secondAttribute="bottom" id="bC7-v9-Ck6"/>
                             <constraint firstItem="NMi-wG-ivD" firstAttribute="leading" secondItem="8v0-sR-Jkm" secondAttribute="leading" id="lKo-J9-2jh"/>
+                            <constraint firstItem="5Lc-eP-B06" firstAttribute="top" secondItem="8v0-sR-Jkm" secondAttribute="top" id="wfw-4F-7cq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8v0-sR-Jkm"/>
                     </view>
+                    <connections>
+                        <outlet property="teamTableView" destination="NMi-wG-ivD" id="w2M-pY-dS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzz-Mo-KUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

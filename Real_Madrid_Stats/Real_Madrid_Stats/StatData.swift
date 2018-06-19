@@ -16,6 +16,12 @@ struct StatData {
     var redCards:Int?
 }
 
+struct TeamData {
+    var pos:Int?
+    var team:String?
+    var points:Int?
+}
+
 struct PlayersData {
     var players = [String:String]()
 }
