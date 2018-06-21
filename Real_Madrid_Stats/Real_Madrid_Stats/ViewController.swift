@@ -45,20 +45,46 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Player picker implementation
         playerPicker.dataSource = self
         playerPicker.delegate = self
         textSeasonPlayerPicker.inputView = playerPicker
         textSeasonPlayerPicker.text = "Player"
         textSeasonPlayerPicker.tintColor = .clear
         
+        textSeasonPlayerPicker.inputView = playerPicker
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePlayer))
+        toolbar.items = [barButton]
+        textSeasonPlayerPicker.inputAccessoryView = toolbar
+        
+        // Season picker implementation
         seasonPicker.dataSource = self
         seasonPicker.delegate = self
         textSeasonLigaTable.inputView = seasonPicker
         textSeasonLigaTable.text = "La Liga Season"
         textSeasonLigaTable.tintColor = .clear
         
-        
+        textSeasonLigaTable.inputView = seasonPicker
+        let toolbarSeason = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let barButtonSeason = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneSeason))
+        toolbarSeason.items = [barButtonSeason]
+        textSeasonLigaTable.inputAccessoryView = toolbarSeason
     }
+    
+    @objc func donePlayer() {
+        textSeasonPlayerPicker.resignFirstResponder()
+    }
+    
+    
+    @objc func doneSeason() {
+        textSeasonLigaTable.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
