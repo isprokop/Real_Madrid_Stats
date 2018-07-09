@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultLigaViewController: UIViewController {
+class ResultLigaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var teamID:String!
     var chosenSeason:String!
@@ -28,7 +28,7 @@ class ResultLigaViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "statisticCell", for: indexPath) as! ShowLigaViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "statCell", for: indexPath) as! ShowLigaViewCell
         
         cell.teamPositionResultLabel.text = "1"
         cell.teamNameResultLabel.text = "-"
@@ -41,19 +41,18 @@ class ResultLigaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func updateUI(_ statData: TeamData) {
-            let results = [String(statData.pos!), String(statData.team!), String(statData.points!)]
-            for item in 0..<results.count {
-                let cell = teamTableView.cellForRow(at: IndexPath(item: item, section: 0)) as? ShowLigaViewCell
-                // ???
-                cell?.teamPositionResultLabel.text = results[0]
-                cell?.teamNameResultLabel.text = results[1]
-                cell?.pointsResultLabel.text = results[2]
-            }
-            
-        }
+        Downloader.sharedInstance.fetchStandings(chosenSeason: chosenSeason, completion: {(standingsData) in
+            self.updateUI(standingsData) } )
     }
     
     
-    
+    func updateUI(_ statData: StandingsData) {
+        let results = [String(statData.rank!), String(statData.name!), String(statData.points!)]
+        for item in 0..<results.count {
+            let cell = teamTableView.cellForRow(at: IndexPath(item: item, section: 0)) as? ShowLigaViewCell
+            cell?.teamPositionResultLabel.text = results[0]
+            cell?.teamNameResultLabel.text = results[1]
+            cell?.pointsResultLabel.text = results[2]
+        }
+    }
 }

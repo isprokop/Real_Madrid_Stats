@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     private var indexSeason = 0
     private var indexPlayer = 0
+    private var indexCompetition = 0
     
     @IBOutlet weak var textSeasonLigaTable: UITextField!
     @IBOutlet weak var textSeasonPlayerPicker: UITextField!
@@ -24,14 +25,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func checkTableConnection(_ sender: Any) {
         checkReachability()
+        //performSegue(withIdentifier: "tableSegue", sender: self)
     }
     
     @IBAction func checkPlayerConnection(_ sender: Any) {
         checkReachability()
+        //performSegue(withIdentifier: "playerSegue", sender: self)
     }
     
     private var teamPlayers = ["Cristiano Ronaldo":"sr:player:750"]
     private var playerAndLigaSeasons = ["2017-2018"]
+    private var tournamentPlayers = ["La Liga"]
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -70,6 +74,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let barButtonSeason = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneSeason))
         toolbarSeason.items = [barButtonSeason]
         textSeasonLigaTable.inputAccessoryView = toolbarSeason
+        
+        Downloader.sharedInstance.fetchPlayers(completion: {(PlayersData) in self.updateUI(PlayersData) } )
+        Downloader.sharedInstance.fetchYears(completion: { (YearsData) in self.updateYearsUI(YearsData) } )
+        
     }
     
     @objc func donePlayer() {
@@ -82,14 +90,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     
-    
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateUI(_ playersData: PlayersData) {
+        teamPlayers = playersData.players
+        self.playerPicker.reloadAllComponents()
     }
+    
+    func updateYearsUI(_ yearsData: YearsData) {
+        playerAndLigaSeasons = Array(yearsData.years.values)
+        self.seasonPicker.reloadAllComponents()
+    }
+    
     
     func checkReachability() {
         if currentReachabilityStatus == .notReachable {
@@ -140,14 +150,31 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard currentReachabilityStatus != .notReachable else { return }
         let names = [String](teamPlayers.keys)
-        let resultDestination = segue.destination as? ResultPlayerViewController
-        resultDestination?.imageName = teamPlayers[names[indexPlayer]]
-        if let playerID = teamPlayers[names[indexPlayer]] {
-            resultDestination?.playerID = playerID
+        
+        if (segue.identifier == "playerSegue") {
+            let resultDestination = segue.destination as? ResultPlayerViewController
+            resultDestination?.imageName = teamPlayers[names[indexPlayer]]
+            if let playerID = teamPlayers[names[indexPlayer]] {
+                resultDestination?.playerID = playerID
+            }
+            let chosenSeason = playerAndLigaSeasons[indexSeason]
+            resultDestination?.chosenSeason = chosenSeason
+            
+        } else if (segue.identifier == "tableSegue") {
+            let resultDestination = segue.destination as? ResultLigaViewController
+            let chosenSeason = playerAndLigaSeasons[indexSeason]
+            
+            //достать id выбранного сезона и запистаь в переменную chosenSeasonID
+            
+            let chosenSeasonID = chosenSeason
+            resultDestination?.chosenSeason = chosenSeasonID
         }
-        let chosenSeason = playerAndLigaSeasons[indexSeason]
-        resultDestination?.chosenSeason = chosenSeason
+        
     }
+
+ 
+
+    
 }
 
 

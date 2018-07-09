@@ -26,8 +26,21 @@ struct PlayersData {
     var players = [String:String]()
 }
 
+struct YearsData {
+    var years = [String:String]()
+}
+
+struct StandingsData {
+    //var standings = [String:String]()
+    var rank:Int?
+    var name:String?
+    var points:Int?
+    
+    
+}
+
 struct TournamentData {
-    let tournaments = ["sr:tournament:8"]
+    let tournament = [String]()
 }
 
 struct SeasonData {
