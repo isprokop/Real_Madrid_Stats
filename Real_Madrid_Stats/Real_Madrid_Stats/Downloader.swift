@@ -106,7 +106,6 @@ class Downloader {
                     guard let id = dict["id"] as? String else { continue }
                     yearsNames[id] = name
                 }
-                
                 DispatchQueue.main.async {
                     completion(YearsData(years: yearsNames))
                 }
